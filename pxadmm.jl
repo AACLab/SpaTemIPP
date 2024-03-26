@@ -1,5 +1,5 @@
 "Distributed version"
-function dstbProxADLADIN!(robo::Vector{robot},  Pred::Array{Float64}, NB::Vector{Vector{Int64}}, pserSet::Vector{Vector{Int64}}, 
+function dstb!(robo::Vector{robot},  Pred::Array{Float64}, NB::Vector{Vector{Int64}}, pserSet::Vector{Vector{Int64}}, 
                         mGP::Vector{GPBase}, time::Float64; MAX_ITER = 100, thres = 1e-2)
     Dim = length(robo[1].posn)
     M   = length(robo)
