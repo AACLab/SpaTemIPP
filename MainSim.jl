@@ -144,7 +144,7 @@ for k in 1:L
     png(Fig, "Fig-5robots/step $k"); display(Fig)
 
     # Execute PxADMM
-    @time Pred, ResE[:,:,k] = dstbProxADLADIN!(robo, Pred, NB, pserSet, mGP, k*τ; MAX_ITER = MAX_ITER)
+    @time Pred, ResE[:,:,k] = dstb!(robo, Pred, NB, pserSet, mGP, k*τ; MAX_ITER = MAX_ITER)
 
     # Robots move to new locations and take measurement
     for i in 1:M
